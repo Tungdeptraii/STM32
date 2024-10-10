@@ -1,0 +1,10 @@
+14:24:26 **** Incremental Build of configuration Debug for project b2_ext ****
+make -j12 all 
+arm-none-eabi-size  b2_ext.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4844	     12	   1572	   6428	   191c	b2_ext.elf
+Finished building: default.size.stdout
+ 
+
+14:24:26 Build Finished. 0 errors, 0 warnings. (took 267ms)
+

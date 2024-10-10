@@ -1,0 +1,10 @@
+17:46:07 **** Incremental Build of configuration Debug for project 3_counter ****
+make -j12 all 
+arm-none-eabi-size  3_counter.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10960	    128	   2048	  13136	   3350	3_counter.elf
+Finished building: default.size.stdout
+ 
+
+17:46:07 Build Finished. 0 errors, 0 warnings. (took 610ms)
+

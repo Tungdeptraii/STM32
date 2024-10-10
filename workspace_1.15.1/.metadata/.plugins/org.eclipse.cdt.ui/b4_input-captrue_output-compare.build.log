@@ -1,0 +1,10 @@
+14:24:27 **** Incremental Build of configuration Debug for project b4_input-captrue_output-compare ****
+make -j12 all 
+arm-none-eabi-size  b4_input-captrue_output-compare.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10296	     12	   1716	  12024	   2ef8	b4_input-captrue_output-compare.elf
+Finished building: default.size.stdout
+ 
+
+14:24:27 Build Finished. 0 errors, 0 warnings. (took 265ms)
+

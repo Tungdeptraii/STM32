@@ -1,0 +1,27 @@
+17:51:04 **** Incremental Build of configuration Debug for project 6_pwm ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:17: warning: unused variable 'MSG' [-Wunused-variable]
+   75 |         int32_t MSG[35] = {'\0'};
+      |                 ^~~
+arm-none-eabi-gcc -o "6_pwm.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32CubeIDE\workspace_lab\6_pwm\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_pwm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 6_pwm.elf
+ 
+arm-none-eabi-size  6_pwm.elf 
+arm-none-eabi-objdump -h -S 6_pwm.elf  > "6_pwm.list"
+   text	   data	    bss	    dec	    hex	filename
+   8788	     12	   1716	  10516	   2914	6_pwm.elf
+arm-none-eabi-objcopy  -O ihex 6_pwm.elf  "6_pwm.hex"
+arm-none-eabi-objcopy  -O binary 6_pwm.elf  "6_pwm.bin"
+Finished building: default.size.stdout
+ 
+Finished building: 6_pwm.hex
+Finished building: 6_pwm.list
+Finished building: 6_pwm.bin
+ 
+ 
+ 
+
+17:51:06 Build Finished. 0 errors, 1 warnings. (took 1s.440ms)
+

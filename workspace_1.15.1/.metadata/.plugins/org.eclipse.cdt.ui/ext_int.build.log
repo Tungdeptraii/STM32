@@ -1,0 +1,10 @@
+14:24:29 **** Incremental Build of configuration Debug for project ext_int ****
+make -j12 all 
+arm-none-eabi-size  ext_int.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4784	     12	   1572	   6368	   18e0	ext_int.elf
+Finished building: default.size.stdout
+ 
+
+14:24:29 Build Finished. 0 errors, 0 warnings. (took 216ms)
+

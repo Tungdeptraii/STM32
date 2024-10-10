@@ -1,0 +1,23 @@
+15:58:21 **** Incremental Build of configuration Debug for project b2_led_button ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "b2_led_button.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32CubeIDE\workspace_1.15.1\b2_led_button\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="b2_led_button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: b2_led_button.elf
+ 
+arm-none-eabi-size  b2_led_button.elf 
+arm-none-eabi-objdump -h -S b2_led_button.elf  > "b2_led_button.list"
+   text	   data	    bss	    dec	    hex	filename
+   4676	     12	   1572	   6260	   1874	b2_led_button.elf
+arm-none-eabi-objcopy  -O ihex b2_led_button.elf  "b2_led_button.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary b2_led_button.elf  "b2_led_button.bin"
+ 
+Finished building: b2_led_button.hex
+Finished building: b2_led_button.list
+Finished building: b2_led_button.bin
+ 
+ 
+ 
+
+15:58:22 Build Finished. 0 errors, 0 warnings. (took 780ms)
+

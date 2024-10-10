@@ -1,0 +1,23 @@
+17:46:04 **** Incremental Build of configuration Debug for project 2_timer ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "2_timer.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32CubeIDE\workspace_lab\2_timer\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_timer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_timer.elf
+ 
+arm-none-eabi-size  2_timer.elf 
+arm-none-eabi-objdump -h -S 2_timer.elf  > "2_timer.list"
+   text	   data	    bss	    dec	    hex	filename
+   6964	     12	   1644	   8620	   21ac	2_timer.elf
+arm-none-eabi-objcopy  -O ihex 2_timer.elf  "2_timer.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary 2_timer.elf  "2_timer.bin"
+ 
+Finished building: 2_timer.hex
+Finished building: 2_timer.bin
+ 
+ 
+Finished building: 2_timer.list
+ 
+
+17:46:06 Build Finished. 0 errors, 0 warnings. (took 2s.155ms)
+

@@ -1,0 +1,10 @@
+15:40:58 **** Incremental Build of configuration Debug for project b2_led-button ****
+make -j12 all 
+arm-none-eabi-size  b2_led-button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4620	     12	   1572	   6204	   183c	b2_led-button.elf
+Finished building: default.size.stdout
+ 
+
+15:40:59 Build Finished. 0 errors, 0 warnings. (took 286ms)
+

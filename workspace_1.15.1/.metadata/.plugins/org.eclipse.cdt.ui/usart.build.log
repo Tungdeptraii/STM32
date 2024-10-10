@@ -1,0 +1,23 @@
+15:23:56 **** Incremental Build of configuration Debug for project usart ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc -o "usart.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32CubeIDE\workspace_1.15.1\usart\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="usart.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: usart.elf
+ 
+arm-none-eabi-size  usart.elf 
+arm-none-eabi-objdump -h -S usart.elf  > "usart.list"
+   text	   data	    bss	    dec	    hex	filename
+   7852	     12	   1644	   9508	   2524	usart.elf
+arm-none-eabi-objcopy  -O ihex usart.elf  "usart.hex"
+arm-none-eabi-objcopy  -O binary usart.elf  "usart.bin"
+Finished building: default.size.stdout
+ 
+Finished building: usart.hex
+Finished building: usart.bin
+ 
+ 
+Finished building: usart.list
+ 
+
+15:23:57 Build Finished. 0 errors, 0 warnings. (took 993ms)
+
